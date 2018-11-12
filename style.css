@@ -1,3 +1,57 @@
-body {
-    background-color: aqua;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    background-color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 7r;
+    grid-template-rows: 2fr 7fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 
+    "title title"
+    "sidebar content"
+    "footer footer"
+    ;
+}
+
+.title {
+   grid-area: title;
+   text-align: center;
+   padding: 4%;
+   background-color: black;
+   color: red;
+}
+
+ .sidebar {
+    grid-area: sidebar;
+    background-color: grey;
+    padding: 50px;
+ }
+
+ .content {
+    grid-area: content;
+    text-align: center;
+    background-color: grey;
+    padding-top: 200px;
+ }
+ .content p {
+     padding: 10px;
+ }
+
+ .search {
+     align-content: center;
+ }
+
+ .footer {
+    grid-area: footer;
+    background-color: black;
+    color: grey;
+    padding: 10px;
+ }

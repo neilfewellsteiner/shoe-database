@@ -2,46 +2,70 @@
 <html>
     <head>
         <title>CWRU Shoes</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
+    </head>   
     <body>
-        <h1>CWRU Shoes</h1>
-        <img src="balenciaga.jpg" alt="Chunky Balenciaga Shoes">
-        <p>Your one stop spot to search for the best shoe deals around Case Western's campus!</p>
-        <select name="sexList" form="sexForm">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-        </select>
-        <select name="brandList" form="brandForm">
-                <option value="nike">Nike</option>
-                <option value="adidas">Adidas</option>
-                <option value="reebok">Reebok</option>
-                <option value="newBalance">New Balance</option>
-                <option value="vans">Vans</option>
-        </select>
-        <select name="colorList" form="colorForm">
-                <option value="black">Black</option>
-                <option value="white">White</option>
-                <option value="blue">Blue</option>
-                <option value="red">Red</option>
-                <option value="yellow">Yellow</option>
-                <option value="green">Green</option>
-        </select>
-        <select name="sizeList" form="sizeForm">
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-        </select>
-        <select name="storeList" form="storeForm">
-                <option value="parmaPayless">Payless (Parma, OH)</option>
-                <option value="mentorTarget">Target (Mentor, OH)</option>
-                <option value="lakewoodWalmart">Walmart (Lakewood, OH)</option>
-                <option value="shakerHeightsFinishLine">Finish Line (Shaker Heights, OH</option>
-        </select>
-        <input type="submit" value="Search For Shoes!">
+        <div class="grid">
+            <div class="title">
+                <h1>CWRU Shoes</h1><br><br>
+                <p>Est. 2018, CWRU Shoes is the premier search method for finding shoe deals around Case Western's campus</p>
+            </div>
+            <div class="sidebar">
+                <img src="img/shoe5.jpg">
+            </div>
+            <div class="content">
+                <p>Use the search bar below to browse the selection of shoes!</p>
+                <form name="shoeForm" action="">
+                    <div class="search">
+                        <select name="sexList" form="shoeForm">
+                            <option value="unselected">--sex--</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <select name="brandList" form="shoeForm">
+                            <option value="unselected">--brand--</option>
+                            <option value="nike">Nike</option>
+                            <option value="adidas">Adidas</option>
+                            <option value="reebok">Reebok</option>
+                            <option value="newBalance">New Balance</option>
+                            <option value="vans">Vans</option>
+                        </select>
+                        <select name="colorList" form="shoeForm">
+                            <option value="unselected">--color--</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="blue">Blue</option>
+                            <option value="red">Red</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="green">Green</option>
+                        </select>
+                        <select name="sizeList" form="shoeForm">
+                            <option value="unselected">--size--</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select name="storeList" form="shoeForm">
+                            <option value="unselected">--store--</option>
+                            <option value="parmaPayless">Payless (Parma, OH)</option>
+                            <option value="mentorTarget">Target (Mentor, OH)</option>
+                            <option value="lakewoodWalmart">Walmart (Lakewood, OH)</option>
+                            <option value="shakerHeightsFinishLine">Finish Line (Shaker Heights, OH</option>
+                        </select>
+                        <br><br>
+                        <input type="submit" value="Search For Shoes!">
+                    </div>
+                </div>
+            </form>
+            <div class="footer">
+                <p>Copyright by Cwalina, Kao, Krishna, Steiner 2018</p>
+            </div>
+        </div>
     </body>
 </html>
