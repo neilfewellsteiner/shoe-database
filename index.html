@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+ <!-- This HTML file serves as the homepage-->
 <html>
     <head>
         <title>CWRU Shoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="style/indexStyle.css"/>
     </head>   
     <body>
         <div class="grid">
@@ -12,57 +13,18 @@
                 <h1>CWRU Shoes</h1><br><br>
                 <p>Est. 2018, CWRU Shoes is the premier search method for finding shoe deals around Case Western's campus</p>
             </div>
-            <div class="sidebar">
-                <img src="img/shoe5.jpg">
+            <div class="nav1">
+                <button onclick="location.href='search.html'" type="browseButton">Browse The Inventory</button>
+            </div>
+            <div class="nav2">
+                <button onclick="location.href='index.html'" type="homeButton">Go To Home</button>
+            </div>
+            <div class="nav3">
+                <button onclick="location.href='addShoe.html'" type="addButton">Add To The Inventory</button>
             </div>
             <div class="content">
-                <p>Use the search bar below to browse the selection of shoes!</p>
-                <form action="search.php" name="shoeForm"action="POST">
-                    <div class="search">
-                        <select name="sexList" form="shoeForm">
-                            <option value="unselected">--sex--</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                        </select>
-                        <select name="brandList" form="shoeForm">
-                            <option value="unselected">--brand--</option>
-                            <option value="nike">Nike</option>
-                            <option value="adidas">Adidas</option>
-                            <option value="reebok">Reebok</option>
-                            <option value="newBalance">New Balance</option>
-                            <option value="vans">Vans</option>
-                        </select>
-                        <select name="colorList" form="shoeForm">
-                            <option value="unselected">--color--</option>
-                            <option value="black">Black</option>
-                            <option value="white">White</option>
-                            <option value="blue">Blue</option>
-                            <option value="red">Red</option>
-                            <option value="yellow">Yellow</option>
-                            <option value="green">Green</option>
-                        </select>
-                        <select name="sizeList" form="shoeForm">
-                            <option value="unselected">--size--</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                        </select>
-                        <select name="storeList" form="shoeForm">
-                            <option value="unselected">--store--</option>
-                            <option value="parmaPayless">Payless (Parma, OH)</option>
-                            <option value="mentorTarget">Target (Mentor, OH)</option>
-                            <option value="lakewoodWalmart">Walmart (Lakewood, OH)</option>
-                            <option value="shakerHeightsFinishLine">Finish Line (Shaker Heights, OH</option>
-                        </select>
-                        <br><br>
-                        <input type="submit" value="Search For Shoes!">
-                    </div>
-                </div>
-            </form>
+                <img src="img/shoe5.jpg" alt="shoe">
+            </div>
             <div class="footer">
                 <p>Copyright by Cwalina, Kao, Krishna, Steiner 2018</p>
             </div>
