@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 6fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 
+    "title title title"
+    "nav1 nav2 nav3"
+    "content content content"
+    "footer footer footer"
+    ;
+}
+
+.title {
+   grid-area: title;
+   text-align: center;
+   padding: 4%;
+   color: red;
+}
+
+ .sidebar {
+    grid-area: sidebar;
+    background-color: grey;
+    padding: 50px;
+ }
+
+ .nav1 {
+    grid-area: nav1;
+    background-color: red;
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.nav1 button {
+    color: #fff !important;
+    text-transform: uppercase;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+ }
+
+ .nav2 button {
+    color: #fff !important;
+    text-transform: uppercase;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+ }
+
+.nav3 button {
+    color: #fff !important;
+    text-transform: uppercase;
+    background: #ed3330;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+}
+
+ .nav2 {
+    grid-area: nav2;
+    background-color: red ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .nav3 {
+    grid-area: nav3;
+    background-color: red;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+  
+
+ .content {
+    grid-area: content;
+    text-align: center;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .content p {
+     padding: 10px;
+ }
+
+ .search {
+     align-content: center;
+ }
+
+ .footer {
+    grid-area: footer;
+    color: grey;
+    padding: 10px;
+    text-align: left;
+ }
