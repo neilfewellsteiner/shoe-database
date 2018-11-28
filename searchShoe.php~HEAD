@@ -6,7 +6,7 @@
 	$storeL = $_POST['storeL'] . ",";
 
 	// Open the text file
-	$file = fopen("searchResult.html", "w+");
+	$file = fopen("searchResult.txt", "w+");
 	ftruncate($file, 0); //Clear the file to 0bit
 
 	$content = $sexL. $brandL. $colorL. $sizeL. $storeL;
