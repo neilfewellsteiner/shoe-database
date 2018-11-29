@@ -12,13 +12,16 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-		$type   = strval($_POST["sexList"]);
+	$type   = strval($_POST["sexList"]);
         $brand  = strval($_POST['brandList']);
         $color  = strval($_POST["colorList"]);
         $size   = strval($_POST["sizeList"]);
         $store  = strval($_POST["storeList"]);
 
-	$sql = "select * from shoe where brand_name='$brand' AND store_name='$store' AND size='$size' AND color='$color' AND type='$type'";
+	$brandVal = "brand_name='$brand' ";
+	$storeVal = "AND store_name='$store' ";
+
+	$sql = "select * from shoe where ". $brandVal . $storeVal . "AND size='$size' AND color='$color' AND type='$type'";
 
 	$result = mysqli_query($conn, $sql);
 
