@@ -64,12 +64,13 @@ if (!$conn) {
 	$result = mysqli_query($conn, $sql);
 
 	if (mysqli_num_rows($result) > 0) {
+		echo "Size  -  Brand  -  Store  -  Color  -  Sex  -  Price"
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "size: " . $row["size"]. " - Brand: " . $row["brand_name"].   " - Store: " . $row["store_name"].  " - color: " . $row["color"]. " - Sex: " . $row["type"]. " - Price: ". $row["price"] . "<br>";
+        echo  $row["size"] . $row["brand_name"].  $row["store_name"].  $row["color"]. $row["type"] . $row["price"] . "<br>";
     }
 } else {
-    echo $sql;
+    echo "0 results Returned!";
 }
 
 mysqli_close($conn);
