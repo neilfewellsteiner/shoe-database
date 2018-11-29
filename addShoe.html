@@ -24,23 +24,19 @@
             </div>
             <div class="content">
                 <p>Use the form below to add to the inventory of shoes!</p><br>
-                <form action="searchShoe.php" name="shoeForm"action="POST">
-                    <div class="search">
-                        <select name="sexList" form="shoeForm">
-                            <option value="unselected">--sex--</option>
+        <form action="addShoe.php" id="shoeForm" method="post">
+                        <select name="sexList" id="sexList">
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
-                        <select name="brandList" form="shoeForm">
-                            <option value="unselected">--brand--</option>
-                            <option value="nike">Nike</option>
-                            <option value="adidas">Adidas</option>
-                            <option value="reebok">Reebok</option>
-                            <option value="newBalance">New Balance</option>
+                        <select name="brandList" id="brandList">
+                            <option value="Nike">Nike</option>
+                            <option value="Adidas">Adidas</option>
+                            <option value="Reebok">Reebok</option>
+                            <option value="New Balance">New Balance</option>
                             <option value="vans">Vans</option>
                         </select>
-                        <select name="colorList" form="shoeForm">
-                            <option value="unselected">--color--</option>
+                        <select name="colorList" id="colorList">
                             <option value="black">Black</option>
                             <option value="white">White</option>
                             <option value="blue">Blue</option>
@@ -48,8 +44,7 @@
                             <option value="yellow">Yellow</option>
                             <option value="green">Green</option>
                         </select>
-                        <select name="sizeList" form="shoeForm">
-                            <option value="unselected">--size--</option>
+                        <select name="sizeList" id="sizeList">
                             <option value="6">6</option>
                             <option value="7">7</option>
                             <option value="8">8</option>
@@ -58,17 +53,15 @@
                             <option value="11">11</option>
                             <option value="12">12</option>
                         </select>
-                        <select name="storeList" form="shoeForm">
-                            <option value="unselected">--store--</option>
-                            <option value="parmaPayless">Payless (Parma, OH)</option>
-                            <option value="mentorTarget">Target (Mentor, OH)</option>
-                            <option value="lakewoodWalmart">Walmart (Lakewood, OH)</option>
-                            <option value="shakerHeightsFinishLine">Finish Line (Shaker Heights, OH)</option>
-                        </select>
-                        <br><br><br>
-                        <input type="submit" value="Search For Shoes!">
-                    </div>
-                </form>
+			<select name="storeList" id="storeList">
+                            <option value="Payless (Parma, OH)">Payless (Parma, OH)</option>
+                            <option value="Target (Mentor, OH)">Target (Mentor, OH)</option>
+                            <option value="Walmart (Lakewood, OH)">Walmart (Lakewood, OH)</option>
+                            <option value="Finish Line (Shaker Heights, OH)">Finish Line (Shaker Heights, OH)</option>
+                        </select>                    
+		<br><br><br>
+                <input type="submit">
+        </form>
             </div>
             <div class="footer">
                 <p>Copyright by Cwalina, Kao, Krishna, Steiner 2018</p>

@@ -1,0 +1,5 @@
+$type   = strval($_POST["sexList"]);
+        $brand  = strval($_POST['brandList']);
+        $color  = strval($_POST["colorList"]);
+        $size   = strval($_POST["sizeList"]);
+        $store  = strval($_POST["storeList"]);

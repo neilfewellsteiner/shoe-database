@@ -1,11 +1,11 @@
 <!DOCTYPE html>
- <!-- This HTML file serves as the page to conduct an inventory search-->
+ <!-- This HTML file serves as the page to add shoes to the inventory-->
 <html>
     <head>
         <title>CWRU Shoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style/searchShoeStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="style/addShoeStyle.css"/>
     </head>   
     <body>
         <div class="grid">
@@ -23,20 +23,23 @@
                 <button onclick="location.href='addShoe.html'" type="addButton">Add To The Inventory</button>
             </div>
             <div class="content">
-                <p>Use the search bar below to browse the selection of shoes!</p><br>
-        <form action="searchShoe.php" id="shoeForm" method="post">
-                        <select name="sexList" id="sexList">
+                <p>Use the form below to add to the inventory of shoes!</p><br>
+        <form action="addShoe.php" name="shoeForm">
+if                        <select name="sexList" id="sexList">
+                            <option value="unselected">--sex--</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
                         <select name="brandList" id="brandList">
+                            <option value="unselected">--brand--</option>
                             <option value="Nike">Nike</option>
                             <option value="Adidas">Adidas</option>
                             <option value="Reebok">Reebok</option>
                             <option value="New Balance">New Balance</option>
                             <option value="vans">Vans</option>
                         </select>
-                        <select name="colorList" id="colorList">
+                        <select name="colorList" id="selectList">
+                            <option value="unselected">--color--</option>
                             <option value="black">Black</option>
                             <option value="white">White</option>
                             <option value="blue">Blue</option>
@@ -45,6 +48,7 @@
                             <option value="green">Green</option>
                         </select>
                         <select name="sizeList" id="sizeList">
+                            <option value="unselected">--size--</option>
                             <option value="6">6</option>
                             <option value="7">7</option>
                             <option value="8">8</option>
@@ -53,16 +57,16 @@
                             <option value="11">11</option>
                             <option value="12">12</option>
                         </select>
-                        <select name="storeList" id="storeList">
+			<select name="storeList" id="storeList">
+                            <option value="unselected">--store--</option>
                             <option value="Payless (Parma, OH)">Payless (Parma, OH)</option>
                             <option value="Target (Mentor, OH)">Target (Mentor, OH)</option>
                             <option value="Walmart (Lakewood, OH)">Walmart (Lakewood, OH)</option>
                             <option value="Finish Line (Shaker Heights, OH)">Finish Line (Shaker Heights, OH)</option>
-                        </select>
-                <br><br><br>
-                <input type="submit">
+                        </select>                    
+		<br><br><br>
+                <input type="submit" value="Add Shoes!">
         </form>
-
             </div>
             <div class="footer">
                 <p>Copyright by Cwalina, Kao, Krishna, Steiner 2018</p>
