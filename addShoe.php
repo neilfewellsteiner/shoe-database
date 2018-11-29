@@ -17,12 +17,13 @@ if (!$conn) {
         $color  = strval($_POST["colorList"]);
         $size   = strval($_POST["sizeList"]);
         $store  = strval($_POST["storeList"]);
+	$price	= strval($_POST["price"]);
 
-	$sql = "insert into shoe(brand_name, store_name, size, color, price, type) values('$brand', '$store', '$size', '$color', '500', '$type')";
+	$sql = "insert into shoe(brand_name, store_name, size, color, price, type) values('$brand', '$store', '$size', '$color', '$price', '$type')";
 
 	$file = fopen('addedVal.html', 'w+'); //Open your .txt file
     	ftruncate($file, 0); //Clear the file to 0bit
-    	$content = $type. PHP_EOL. $brand. PHP_EOL . $color . PHP_EOL . $size. PHP_EOL  . $type . PHP_EOL;
+    	$content = $type. PHP_EOL. $brand. PHP_EOL . $color . PHP_EOL . $size. PHP_EOL  . $store . PHP_EOL . $price;
     	fwrite($file , $content); //Now lets write it in there
     	fclose($file );
 
