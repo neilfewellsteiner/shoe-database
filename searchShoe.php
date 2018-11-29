@@ -64,7 +64,7 @@ if (!$conn) {
 	$result = mysqli_query($conn, $sql);
 
 	if (mysqli_num_rows($result) > 0) {
-		echo "Size  -  Brand  -  Store  -  Color  -  Sex  -  Price"
+		echo "Size  -  Brand  -  Store  -  Color  -  Sex  -  Price";
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo  $row["size"] . $row["brand_name"].  $row["store_name"].  $row["color"]. $row["type"] . $row["price"] . "<br>";
