@@ -21,12 +21,6 @@ if (!$conn) {
 
 	$sql = "insert into shoe(brand_name, store_name, size, color, price, type) values('$brand', '$store', '$size', '$color', '$price', '$type')";
 
-	$file = fopen('addedVal.html', 'w+'); //Open your .txt file
-    	ftruncate($file, 0); //Clear the file to 0bit
-    	$content = $type. PHP_EOL. $brand. PHP_EOL . $color . PHP_EOL . $size. PHP_EOL  . $store . PHP_EOL . $price;
-    	fwrite($file , $content); //Now lets write it in there
-    	fclose($file );
-
 	if (mysqli_query($conn, $sql)) {
 		header('Location: addShoeResult.html');
 	} else {

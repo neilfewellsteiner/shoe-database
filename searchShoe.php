@@ -68,14 +68,14 @@ if (!$conn) {
 <table id = "shoeList"">
         <thead>
             <tr>
-                <th style="padding-right:40px;">Size</th>
-                <th style="padding-right:40px;">Brand</th>
-                <th style="padding-right:40px;">Store</th>
-                <th style="padding-right:40px;">Color</th>
-		<th style="padding-right:40px;">Sex</th>
-		<th style="padding-right:40px;">Price</th>
-  		<th style="padding-right:40px;">Delete</th>
-		<th style="padding-right:40px;">Update</th>
+                <th style="padding-right:36px;">Size</th>
+                <th style="padding-right:36px;">Brand</th>
+                <th style="padding-right:36px;">Store</th>
+                <th style="padding-right:36px;">Color</th>
+		<th style="padding-right:36px;">Sex</th>
+		<th style="padding-right:36px;">Price</th>
+  		<th style="padding-right:36px;">Delete</th>
+		<th style="padding-right:36px;">Update Price</th>
 
             </tr>
         </thead>
@@ -86,22 +86,27 @@ if (!$conn) {
 
 
             <tr>
-                <td class="updateSize" style="padding-right:40px;"><?php echo $row["size"]; ?></td>
-                <td class="updateBrand" style="padding-right:40px;"><?php echo $row["brand_name"]; ?></td>
-                <td class="updateStore" style="padding-right:40px;"><?php echo $row["store_name"]; ?></td>
-                <td class="updateColor" style="padding-right:40px;"><?php echo $row["color"]; ?></td>
-		<td class="updateSex" style="padding-right:40px;"><?php echo $row['type']; ?></td>
-                <td class="updatePrice" style="padding-right:40px;"><?php echo $row["price"]; ?></td>
+                <td class="updateSize" style="padding-right:36px;"><?php echo $row["size"]; ?></td>
+                <td class="updateBrand" style="padding-right:36px;"><?php echo $row["brand_name"]; ?></td>
+                <td class="updateStore" style="padding-right:36px;"><?php echo $row["store_name"]; ?></td>
+                <td class="updateColor" style="padding-right:36px;"><?php echo $row["color"]; ?></td>
+		<td class="updateSex" style="padding-right:36;"><?php echo $row['type']; ?></td>
+                <td class="updatePrice" style="padding-right:36px;"><?php echo $row["price"]; ?></td>
 		<?php
 			$ec = " AND brand_name='$row[brand_name]' AND store_name='$row[store_name]' AND color='$row[color]' AND type='$row[type]' AND price='$row[price]'"; ?>
-                <td class="deleteRow" style="padding-right:40px;">
+                <td class="deleteRow" style="padding-right:36px;">
 			<form action="delete.php" method="post">
 				<input type="hidden" name="id" value="<?php echo 'size =' . $row['size'] . $ec; ?>">
         			<input type="submit" name="submit" value="Delete">
 			</form></td>
 
-		<td class="updateRow" style="padding-right:40px;">
-			<input type="submit" name="submit" value="Update">
+		<td class="updateRow" style="padding-right:36px;">
+			<form action="update.php" method="post">
+				<input type="text" name="updatePrice" value="0.0" size="4">
+				<input type="hidden" name="priceVal" value="<?php echo $row['price']; ?>"> 
+				<input type="hidden" name="updateId" value="<?php echo 'size =' . $row['size'] . $ec; ?>">
+				<input type="submit" name="submit" value="Update">
+			</form>
 		</td>
 
 </tr>

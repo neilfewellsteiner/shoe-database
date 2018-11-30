@@ -23,8 +23,34 @@
                 <button onclick="location.href='addShoe.html'" type="addButton">Add To The Inventory</button>
             </div>
             <div class="content">
-                Result Here
-            </div>
+<?php
+	 $query=$_POST['updateId'];
+	 $init_price=$_POST['priceVal'];
+	 $priceUpdate=$_POST['updatePrice'];
+
+	$sql = "UPDATE shoe SET price= '$priceUpdate' WHERE " . $query;
+
+$servername = 'localhost:3306';
+$username = 'team7';
+$password = 'Team_7';
+$dbname = 'shoes';
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+if (mysqli_query($conn, $sql)) {
+		echo "<h1>Shoe Updated Successfully!!</h1>";
+	} else {
+    		echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+	}
+
+?>
+
             <div class="footer">
                 <p>Copyright by Cwalina, Kao, Krishna, Steiner 2018</p>
             </div>
