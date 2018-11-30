@@ -90,21 +90,20 @@ if (!$conn) {
                 <td class="updateBrand" style="padding-right:40px;"><?php echo $row["brand_name"]; ?></td>
                 <td class="updateStore" style="padding-right:40px;"><?php echo $row["store_name"]; ?></td>
                 <td class="updateColor" style="padding-right:40px;"><?php echo $row["color"]; ?></td>
-		<td class="updateSex" style="padding-right:40px;"><?php echo $row["type"]; ?></td>
+		<td class="updateSex" style="padding-right:40px;"><?php echo $row['type']; ?></td>
                 <td class="updatePrice" style="padding-right:40px;"><?php echo $row["price"]; ?></td>
+		<?php
+			$ec = " AND brand_name='$row[brand_name]' AND store_name='$row[store_name]' AND color='$row[color]' AND type='$row[type]' AND price='$row[price]'"; ?>
+                <td class="deleteRow" style="padding-right:40px;">
+			<form action="delete.php" method="post">
+				<input type="hidden" name="id" value="<?php echo 'size =' . $row['size'] . $ec; ?>">
+        			<input type="submit" name="submit" value="Delete">
+			</form></td>
 
-                <td class="deleteRow" style="padding-right:40px;"><form action='delete.php' method="post">
+		<td class="updateRow" style="padding-right:40px;">
+			<input type="submit" name="submit" value="Update">
+		</td>
 
-<input type="hidden" name="name" value="">
-<input type="submit" name="submit" value="Delete">
-
-<td class="updateRow" style="padding-right:40px;"><form action='delete.php' method="post">
-
-<input type="hidden" name="name" value="">
-<input type="submit" name="submit" value="Update">
-
-
-</form></td>  
 </tr>
 
         <?php endwhile; ?>
