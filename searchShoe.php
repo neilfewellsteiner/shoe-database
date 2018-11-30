@@ -63,19 +63,54 @@ if (!$conn) {
 
 	$result = mysqli_query($conn, $sql);
 
-	if (mysqli_num_rows($result) > 0) {
-		echo "Size &nbsp&nbsp -  Brand  -  Store  -  Color  -  Sex  -  Price <br>";
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo  $row["size"] . $row["brand_name"].  $row["store_name"].  $row["color"]. $row["type"] . $row["price"] . "<br>";
-    }
-} else {
-    echo "0 results Returned!";
-}
-
-mysqli_close($conn);
-
+	if (mysqli_num_rows($result) > 0) 
 ?>
+<table id = "shoeList"">
+        <thead>
+            <tr>
+                <th style="padding-right:40px;">Size</th>
+                <th style="padding-right:40px;">Brand</th>
+                <th style="padding-right:40px;">Store</th>
+                <th style="padding-right:40px;">Color</th>
+		<th style="padding-right:40px;">Sex</th>
+		<th style="padding-right:40px;">Price</th>
+  		<th style="padding-right:40px;">Delete</th>
+		<th style="padding-right:40px;">Update</th>
+
+            </tr>
+        </thead>
+        <tbody>
+<?php
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) : ?>
+
+
+            <tr>
+                <td class="updateSize" style="padding-right:40px;"><?php echo $row["size"]; ?></td>
+                <td class="updateBrand" style="padding-right:40px;"><?php echo $row["brand_name"]; ?></td>
+                <td class="updateStore" style="padding-right:40px;"><?php echo $row["store_name"]; ?></td>
+                <td class="updateColor" style="padding-right:40px;"><?php echo $row["color"]; ?></td>
+		<td class="updateSex" style="padding-right:40px;"><?php echo $row["type"]; ?></td>
+                <td class="updatePrice" style="padding-right:40px;"><?php echo $row["price"]; ?></td>
+
+                <td class="deleteRow" style="padding-right:40px;"><form action='delete.php' method="post">
+
+<input type="hidden" name="name" value="">
+<input type="submit" name="submit" value="Delete">
+
+<td class="updateRow" style="padding-right:40px;"><form action='delete.php' method="post">
+
+<input type="hidden" name="name" value="">
+<input type="submit" name="submit" value="Update">
+
+
+</form></td>  
+</tr>
+
+        <?php endwhile; ?>
+
+        </tbody>
+    </table>
 </div>
             <div class="footer">
                 <p>Copyright by Cwalina, Kao, Krishna, Steiner 2018</p>
